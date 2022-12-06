@@ -3,9 +3,9 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use App\Models\Barang;
-use App\Models\Gudang;
-use App\Models\Store;
+use App\Models\Skincare;
+use App\Models\Perusahaan;
+use App\Models\Toko;
 
 return new class extends Migration
 {
@@ -16,13 +16,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('barangs', function (Blueprint $table) {
-            $table->id('id_barang');
-            $table->string('nama_barang');
+        Schema::create('skincares', function (Blueprint $table) {
+            $table->id('id_skincare');
+            $table->string('nama_skincare');
             $table->integer('harga');
             $table->integer('stock');
-            $table->foreignIdFor(Gudang::class,'id_gudang');
-            $table->foreignIdFor(Store::class,'id_store');
+            $table->foreignIdFor(Perusahaan::class,'id_perusahaan');
+            $table->foreignIdFor(Toko::class,'id_toko');
             $table->softDeletes();
             $table->timestamps();
         });
@@ -35,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('barangs');
+        Schema::dropIfExists('skincares');
     }
 };

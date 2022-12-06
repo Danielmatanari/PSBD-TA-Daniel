@@ -71,7 +71,7 @@
             margin-left: -15rem;
         }
         }
-        </style>  
+        </style>
                 <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <!-- Styles -->
@@ -81,39 +81,39 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
-        </style>  
+        </style>
     </head>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
-    <body>        
+    <body>
         <div class="d-flex" id="wrapper">
         <!-- Page Content -->
         <div id="page-content-wrapper">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <div style="background: LIGHTGREEN; font-size: 24px; color: black">SELAMAT DATANG DI ITEM STORE</div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="text-center" >
+            <div class= "text-center"style="font-size: 24px; color: black ">SKINCARE PRODUCT</div>
+            </div>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                <a class="nav-link" href="{{route('barang.index')}}" class="list-group-item list-group-item-action bg-light">Barang</a>
+                <a href="{{route('skincare.index')}}" class="nav-link text-black ">Skincare</a>
                 </li>
                 <li class="nav-item active">
-                <a class="nav-link" href="{{route('gudang.index')}}" class="list-group-item list-group-item-action bg-light">Gudang</a>
+                <a href="{{route('perusahaan.index')}}" class="nav-link text-black">Perusahaan</a>
                 </li>
                 <li class="nav-item active">
-                <a class="nav-link" href="{{route('store.index')}}" class="list-group-item list-group-item-action bg-light">Store</a>
+                <a href="{{route('toko.index')}}" class="nav-link text-black">Toko</a>
                 </li>
                 <li class="nav-item active">
-                <a class="nav-link" href="{{route('keterangan.index')}}" class="list-group-item list-group-item-action bg-light">Keterangan</a>
-                <li class="nav-item active">
-                <a class="nav-link" href="{{route('softDelete')}}">Recycle Bin<span class="sr-only">(current)</span></a>
+                <a class="nav-link text-black" href="{{route('softDelete')}}">Sampah<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-black" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Akun
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/logout">Logout</a>
+                    <a class="dropdown-item text-danger" href="/logout">Logout</a>
                 </div>
                 </li>
             </ul>

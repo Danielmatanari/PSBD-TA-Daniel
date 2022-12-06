@@ -1,18 +1,18 @@
 @extends('menu')
 
 @section('container')
-<h4 class="mt-5">Data Barang Terhapus</h4>
+<h4 class="mt-5">Data Sampah</h4>
 
 <table id="table_id" class="table table-hover mt-2">
     <thead>
       <tr>
         <th>No.</th>
-        <th>ID Barang</th>
-        <th>Nama Barang</th>
+        <th>ID Skincare</th>
+        <th>Nama Skincare</th>
         <th>Harga</th>
         <th>Stock</th>
-        <th>Nama Gudang</th>
-        <th>Nama Store</th>
+        <th>Nama Perusahaan</th>
+        <th>Nama Toko</th>
         <th>Tanggal Terhapus</th>
         <th>Action</th>
       </tr>
@@ -21,19 +21,19 @@
         @foreach ($datas as $data)
             <tr>
                 <td>{{$loop->iteration}}</td>
-                <td>{{ $data->id_barang }}</td>
-                <td>{{ $data->nama_barang }}</td>
+                <td>{{ $data->id_skincare }}</td>
+                <td>{{ $data->nama_skincare }}</td>
                 <td>{{ $data->harga }}</td>
                 <td>{{ $data->stock }}</td>
-                <td>{{ $data->nama_gudang }}</td>
-                <td>{{ $data->nama_store }}</td>
+                <td>{{ $data->id_perusahaan }}</td>
+                <td>{{ $data->id_toko }}</td>
                 <td>{{ $data->deleted_at }}</td>
                 <td>
-                <a href="{{ route('barang.restore', $data->id_barang) }}" type="button" class="btn btn-warning rounded-3">Restore</a>
-                <form action="{{ route('barang.hardDelete', $data->id_barang) }}" method="post" class="d-inline">
+                <a href="{{ route('skincare.restore', $data->id_skincare) }}" type="button" class="btn btn-warning rounded-3">Restore</a>
+                <form action="{{ route('skincare.hardDelete', $data->id_skincare) }}" method="post" class="d-inline">
                     @method('delete')
                     @csrf
-                    <button class="btn btn-danger border-0" onclick="return confirm('Upps, Are you sure ?')">Hapus</button>
+                    <button class="btn btn-danger border-0" onclick="return confirm('serius ?')">Hapus</button>
                 </form>
             </tr>
             @endforeach

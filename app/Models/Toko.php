@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Gudang extends Model
+class Toko extends Model
 {
     use HasFactory;
 
@@ -14,7 +14,7 @@ class Gudang extends Model
      *
      * @var string
      */
-    protected $table = 'gudangs';
+    protected $table = 'tokos ';
 
     /**
      * The attributes that aren't mass assignable.

@@ -19,15 +19,15 @@
 
         <h5 class="card-title fw-bolder mb-3">Changed Item Data</h5>
 
-		<form method="post" action="{{ route('barang.update', $data->id_barang) }}">
+		<form method="post" action="{{ route('skincare.update', $data->id_skincare) }}">
 			@csrf
             <div class="mb-3">
-                <label for="id_barang" class="form-label">ID Barang</label>
-                <input type="text" class="form-control" id="id_barang" name="id_barang" value="{{ $data->id_barang }}">
+                <label for="id_skincare" class="form-label">ID skincare</label>
+                <input type="text" class="form-control" id="id_skincare" name="id_skincare" value="{{ $data->id_skincare }}">
             </div>
 			<div class="mb-3">
-                <label for="nama_barang" class="form-label">Nama Barang</label>
-                <input type="text" class="form-control" id="nama_barang" name="nama_barang" value="{{ $data->nama_barang }}">
+                <label for="nama_skincare" class="form-label">Nama skincare</label>
+                <input type="text" class="form-control" id="nama_skincare" name="nama_skincare" value="{{ $data->nama_skincare }}">
             </div>
             <div class="mb-3">
                 <label for="harga" class="form-label">Harga</label>
@@ -38,16 +38,16 @@
                 <input type="text" class="form-control" id="stock" name="stock" value="{{ $data->stock }}">
             </div>
             <div class="mb-3">
-                <label for="id_gudang" class="form-label">ID Gudang</label>
-                <input type="text" class="form-control" id="id_gudang" name="id_gudang" value="{{ $data->id_gudang }}">
+                <label for="id_perusahaan" class="form-label">ID perusahaan</label>
+                <input type="text" class="form-control" id="id_perusahaan" name="id_perusahaan" value="{{ $data->id_perusahaan }}">
             </div>
             <div class="mb-3">
-                <label for="id_store" class="form-label">ID Store</label>
-                <input type="text" class="form-control" id="id_store" name="id_store" value="{{ $data->id_store }}">
+                <label for="id_toko" class="form-label">ID toko</label>
+                <input type="text" class="form-control" id="id_toko" name="id_toko" value="{{ $data->id_toko }}">
             </div>
             </div>
 			<div class="text-center">
-				<input type="submit" class="btn btn-primary" value="Ubah" />
+				<input type="submit" class="btn btn-primary" value="Change" />
 			</div>
 		</form>
 	</div>
